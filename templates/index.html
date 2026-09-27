@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+
+{% block title %}Candidate Profile | AI-Based Job Recommendation System{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- Hero Header -->
+    <div class="row justify-content-center text-center mb-4">
+        <div class="col-lg-8">
+            <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-2">
+                <i class="bi bi-stars me-1"></i> NLP &amp; TF-IDF Job Matching Engine
+            </span>
+            <h1 class="display-6 fw-bold text-dark mb-2">Find Your Ideal Career Match</h1>
+            <p class="text-muted">
+                Enter your technical skillset, qualifications, and career preferences. Our content-based machine learning model will analyze and match your profile with the top 5 most relevant job opportunities.
+            </p>
+        </div>
+    </div>
+
+    <!-- Quick Load Sample Profile Buttons (Viva / Demo Friendly) -->
+    <div class="row justify-content-center mb-4">
+        <div class="col-lg-10">
+            <div class="card border-0 shadow-sm bg-white p-3">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2">
+                    <span class="small fw-bold text-muted text-uppercase">
+                        <i class="bi bi-lightning-charge-fill text-warning me-1"></i> Quick Test Profiles:
+                    </span>
+                    <div class="btn-group btn-group-sm flex-wrap gap-1" role="group">
+                        <button type="button" class="btn btn-outline-primary rounded-pill px-3 sample-btn" 
+                                onclick="fillSample('Data Analyst', 'Python, Pandas, SQL, Tableau, Excel', 'B.Tech', '1', 'Data Analysis, Machine Learning', 'Hyderabad')">
+                            📊 Data Analyst
+                        </button>
+                        <button type="button" class="btn btn-outline-success rounded-pill px-3 sample-btn" 
+                                onclick="fillSample('Python Developer', 'Python, Django, REST API, PostgreSQL, Git', 'B.Tech', '2', 'Backend Development, Web Services', 'Bangalore')">
+                            🐍 Python Developer
+                        </button>
+                        <button type="button" class="btn btn-outline-info rounded-pill px-3 sample-btn" 
+                                onclick="fillSample('Machine Learning Engineer', 'Python, Scikit-learn, Statistics, MLOps, Docker', 'M.Tech', '2', 'Predictive Modeling, AI, Machine Learning', 'Pune')">
+                            🤖 ML Engineer
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary rounded-pill px-3 sample-btn" 
+                                onclick="fillSample('Web Developer', 'HTML5, CSS3, JavaScript, React, REST API', 'B.Tech', '1', 'Frontend Engineering, Web Apps', 'Remote')">
+                            🌐 Web Developer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Candidate Profile Form -->
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                <div class="card-header bg-gradient bg-primary text-white py-3 px-4">
+                    <h5 class="mb-0 fw-bold">
+                        <i class="bi bi-person-badge-fill me-2"></i> Candidate Profile Form
+                    </h5>
+                    <small class="text-white-50">All fields are analyzed by our TF-IDF Vectorizer and multi-factor ranking algorithm</small>
+                </div>
+
+                <div class="card-body p-4 p-md-5">
+                    <form action="{{ url_for('recommend') }}" method="POST" id="jobForm" novalidate>
+                        
+                        <!-- Row 1: Skills -->
+                        <div class="mb-4">
+                            <label for="skills" class="form-label fw-semibold text-dark">
+                                <i class="bi bi-tools text-primary me-1"></i> Technical Skills <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" class="form-control form-control-lg" id="skills" name="skills" 
+                                   placeholder="e.g. Python, Pandas, SQL, Machine Learning, Tableau" 
+                                   value="{{ form_data.skills if form_data else '' }}" required>
+                            <div class="form-text">Comma-separated list of your technical competencies and tools.</div>
+                        </div>
+
+                        <!-- Row 2: Qualification & Experience -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label for="qualification" class="form-label fw-semibold text-dark">
+                                    <i class="bi bi-mortarboard-fill text-primary me-1"></i> Highest Qualification <span class="text-danger">*</span>
+                                </label>
+                                <select class="form-select form-select-lg" id="qualification" name="qualification" required>
+                                    <option value="" disabled {% if not form_data or not form_data.qualification %}selected{% endif %}>Select Qualification</option>
+                                    <option value="B.Tech" {% if form_data and form_data.qualification == 'B.Tech' %}selected{% endif %}>B.Tech</option>
+                                    <option value="B.E." {% if form_data and form_data.qualification == 'B.E.' %}selected{% endif %}>B.E.</option>
+                                    <option value="M.Tech" {% if form_data and form_data.qualification == 'M.Tech' %}selected{% endif %}>M.Tech</option>
+                                    <option value="MCA" {% if form_data and form_data.qualification == 'MCA' %}selected{% endif %}>MCA</option>
+                                    <option value="BCA" {% if form_data and form_data.qualification == 'BCA' %}selected{% endif %}>BCA</option>
+                                    <option value="B.Sc" {% if form_data and form_data.qualification == 'B.Sc' %}selected{% endif %}>B.Sc</option>
+                                    <option value="Any Graduate" {% if form_data and form_data.qualification == 'Any Graduate' %}selected{% endif %}>Any Graduate</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="experience" class="form-label fw-semibold text-dark">
+                                    <i class="bi bi-clock-history text-primary me-1"></i> Years of Experience <span class="text-danger">*</span>
+                                </label>
+                                <input type="number" class="form-control form-control-lg" id="experience" name="experience" 
+                                       placeholder="e.g. 1 (use 0 for fresher)" min="0" max="50" step="1" 
+                                       value="{{ form_data.experience if form_data else '' }}" required>
+                                <div class="form-text">Enter 0 if you are a fresh graduate / entry-level candidate.</div>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Interests -->
+                        <div class="mb-4">
+                            <label for="interests" class="form-label fw-semibold text-dark">
+                                <i class="bi bi-heart-pulse-fill text-primary me-1"></i> Technical Interests &amp; Domain <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" class="form-control form-control-lg" id="interests" name="interests" 
+                                   placeholder="e.g. Data Analysis, Machine Learning, Predictive Modeling" 
+                                   value="{{ form_data.interests if form_data else '' }}" required>
+                            <div class="form-text">Areas of technology you are most enthusiastic about working on.</div>
+                        </div>
+
+                        <!-- Row 4: Preferred Role & Location -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label for="preferred_role" class="form-label fw-semibold text-dark">
+                                    <i class="bi bi-person-workspace text-primary me-1"></i> Preferred Job Role <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control form-control-lg" id="preferred_role" name="preferred_role" 
+                                       placeholder="e.g. Data Analyst, Python Developer" 
+                                       value="{{ form_data.preferred_role if form_data else '' }}" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="preferred_location" class="form-label fw-semibold text-dark">
+                                    <i class="bi bi-geo-alt-fill text-primary me-1"></i> Preferred Location <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" class="form-control form-control-lg" id="preferred_location" name="preferred_location" 
+                                       placeholder="e.g. Hyderabad, Bangalore, Pune, Remote" 
+                                       value="{{ form_data.preferred_location if form_data else '' }}" required>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg py-3 fw-bold shadow-sm" id="submitBtn">
+                                <i class="bi bi-stars me-2"></i> Get Top 5 Job Recommendations
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Algorithm Explanation Summary Card -->
+            <div class="card border-0 bg-white shadow-sm rounded-4 p-4 mt-4">
+                <h6 class="fw-bold text-dark mb-3"><i class="bi bi-info-circle-fill text-primary me-1"></i> How Scores Are Calculated:</h6>
+                <div class="row text-center g-3">
+                    <div class="col-6 col-md-3">
+                        <div class="p-3 bg-light rounded-3">
+                            <div class="display-6 fw-bold text-primary mb-1">70%</div>
+                            <div class="small fw-semibold text-dark">Content Match</div>
+                            <div class="text-muted smaller">TF-IDF &amp; Cosine Similarity</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="p-3 bg-light rounded-3">
+                            <div class="display-6 fw-bold text-info mb-1">15%</div>
+                            <div class="small fw-semibold text-dark">Role Match</div>
+                            <div class="text-muted smaller">Preferred Title Alignment</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="p-3 bg-light rounded-3">
+                            <div class="display-6 fw-bold text-success mb-1">10%</div>
+                            <div class="small fw-semibold text-dark">Location Match</div>
+                            <div class="text-muted smaller">Target City / Remote</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="p-3 bg-light rounded-3">
+                            <div class="display-6 fw-bold text-warning mb-1">5%</div>
+                            <div class="small fw-semibold text-dark">Experience Match</div>
+                            <div class="text-muted smaller">Years of Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Quick sample population function for demonstration and viva presentation
+    function fillSample(role, skills, qualification, experience, interests, location) {
+        document.getElementById('preferred_role').value = role;
+        document.getElementById('skills').value = skills;
+        document.getElementById('qualification').value = qualification;
+        document.getElementById('experience').value = experience;
+        document.getElementById('interests').value = interests;
+        document.getElementById('preferred_location').value = location;
+        
+        // Highlight form smoothly
+        const formCard = document.getElementById('jobForm');
+        formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+</script>
+{% endblock %}

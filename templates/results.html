@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+
+{% block title %}Top 5 Job Recommendations | AI Job Recommender{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+
+    <!-- Candidate Profile Summary Card -->
+    <div class="card border-0 shadow-sm rounded-4 mb-4 bg-white">
+        <div class="card-body p-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                <div>
+                    <span class="badge bg-primary-subtle text-primary px-3 py-1 rounded-pill fw-semibold mb-2">
+                        <i class="bi bi-person-check-fill me-1"></i> Analyzed Candidate Profile
+                    </span>
+                    <h3 class="fw-bold mb-1 text-dark">{{ candidate.preferred_role }}</h3>
+                    <p class="text-muted mb-0 small">
+                        <i class="bi bi-geo-alt me-1 text-danger"></i> {{ candidate.preferred_location }} &bull;
+                        <i class="bi bi-mortarboard me-1 text-primary"></i> {{ candidate.qualification }} &bull;
+                        <i class="bi bi-briefcase me-1 text-success"></i> {{ candidate.experience }} Year(s) Experience
+                    </p>
+                </div>
+                <div>
+                    <a href="{{ url_for('index') }}" class="btn btn-outline-primary px-4 py-2 rounded-pill fw-semibold">
+                        <i class="bi bi-arrow-left-circle me-1"></i> Search Again
+                    </a>
+                </div>
+            </div>
+
+            <hr class="my-3 text-secondary">
+
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <span class="small fw-bold text-muted text-uppercase d-block mb-1">Skills Analyzed:</span>
+                    <div class="d-flex flex-wrap gap-1">
+                        {% for skill in candidate.skills.split(',') %}
+                            <span class="badge bg-light text-dark border px-2 py-1">{{ skill.strip() }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <span class="small fw-bold text-muted text-uppercase d-block mb-1">Interests / Focus:</span>
+                    <span class="badge bg-info-subtle text-info-emphasis border border-info-subtle px-2 py-1">
+                        {{ candidate.interests }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recommendations Header -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <h4 class="fw-bold mb-0 text-dark">
+                <i class="bi bi-award-fill text-warning me-2"></i> Top 5 Recommended Jobs
+            </h4>
+            <small class="text-muted">Ranked by TF-IDF Cosine Similarity &amp; Multi-Factor Scoring</small>
+        </div>
+        <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-2 rounded-pill fw-semibold">
+            5 Matches Found
+        </span>
+    </div>
+
+    <!-- Job Cards List -->
+    <div class="row g-4">
+        {% for job in recommendations %}
+        <div class="col-12">
+            <div class="card job-card border-0 shadow-sm rounded-4 overflow-hidden position-relative">
+                <div class="card-body p-4">
+                    <div class="row align-items-start g-3">
+                        
+                        <!-- Left & Middle: Job Details -->
+                        <div class="col-lg-9 col-md-8">
+                            <div class="d-flex align-items-center gap-2 mb-2 flex-wrap">
+                                <span class="badge bg-secondary-subtle text-secondary-emphasis fw-bold rounded-pill px-3 py-1">
+                                    #{{ loop.index }} Match
+                                </span>
+                                <span class="badge bg-info-subtle text-info-emphasis rounded-pill px-3 py-1">
+                                    <i class="bi bi-tag-fill me-1"></i> {{ job.job_type }}
+                                </span>
+                            </div>
+
+                            <h4 class="card-title fw-bold text-primary mb-1">{{ job.job_title }}</h4>
+                            <h6 class="text-dark fw-semibold mb-3">
+                                <i class="bi bi-building me-1 text-muted"></i> {{ job.company }}
+                            </h6>
+
+                            <!-- Meta Chips -->
+                            <div class="d-flex flex-wrap gap-3 text-muted small mb-3">
+                                <span><i class="bi bi-geo-alt-fill text-danger me-1"></i> {{ job.location }}</span>
+                                <span><i class="bi bi-briefcase-fill text-success me-1"></i> {{ job.experience }} Year(s) Exp Required</span>
+                                <span><i class="bi bi-mortarboard-fill text-primary me-1"></i> {{ job.qualification }}</span>
+                            </div>
+
+                            <!-- Description -->
+                            <p class="card-text text-secondary mb-3">
+                                {{ job.description }}
+                            </p>
+
+                            <!-- Required Skills -->
+                            <div class="mb-3">
+                                <span class="small fw-bold text-muted text-uppercase d-block mb-1">Required Skills:</span>
+                                <div class="d-flex flex-wrap gap-1">
+                                    {% for skill in job.required_skills.split(',') %}
+                                        <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-2 py-1">
+                                            {{ skill.strip() }}
+                                        </span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <!-- Explainable Scoring Breakdown Accordion (Viva Friendly) -->
+                            <div class="accordion accordion-flush mt-2" id="breakdown-{{ job.job_id }}">
+                                <div class="accordion-item border-0 bg-light rounded-3">
+                                    <h2 class="accordion-header" id="heading-{{ job.job_id }}">
+                                        <button class="accordion-button collapsed py-2 px-3 bg-transparent small fw-semibold text-secondary" 
+                                                type="button" data-bs-toggle="collapse" 
+                                                data-bs-target="#collapse-{{ job.job_id }}" 
+                                                aria-expanded="false" aria-controls="collapse-{{ job.job_id }}">
+                                            <i class="bi bi-sliders me-2 text-primary"></i> View Score Calculation Breakdown
+                                        </button>
+                                    </h2>
+                                    <div id="collapse-{{ job.job_id }}" class="accordion-collapse collapse" 
+                                         aria-labelledby="heading-{{ job.job_id }}" 
+                                         data-bs-parent="#breakdown-{{ job.job_id }}">
+                                        <div class="accordion-body p-3 pt-1">
+                                            <div class="row g-2 text-center small">
+                                                <div class="col-6 col-md-3">
+                                                    <div class="bg-white p-2 rounded border">
+                                                        <div class="text-muted smaller">Content Match (70%)</div>
+                                                        <div class="fw-bold text-primary">{{ job.content_score }}%</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-md-3">
+                                                    <div class="bg-white p-2 rounded border">
+                                                        <div class="text-muted smaller">Role Match (15%)</div>
+                                                        <div class="fw-bold text-info">{{ job.role_score }}%</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-md-3">
+                                                    <div class="bg-white p-2 rounded border">
+                                                        <div class="text-muted smaller">Location Match (10%)</div>
+                                                        <div class="fw-bold text-success">{{ job.location_score }}%</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-md-3">
+                                                    <div class="bg-white p-2 rounded border">
+                                                        <div class="text-muted smaller">Experience Match (5%)</div>
+                                                        <div class="fw-bold text-warning">{{ job.experience_score }}%</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Match Score Radial / Progress -->
+                        <div class="col-lg-3 col-md-4 text-center d-flex flex-column justify-content-center border-start-md ps-md-4">
+                            <div class="match-score-badge p-3 rounded-4 mb-2 
+                                        {% if job.match_score >= 80 %}bg-success-subtle text-success border border-success-subtle
+                                        {% elif job.match_score >= 60 %}bg-primary-subtle text-primary border border-primary-subtle
+                                        {% else %}bg-warning-subtle text-warning-emphasis border border-warning-subtle{% endif %}">
+                                <div class="smaller text-uppercase fw-bold mb-1">Match Score</div>
+                                <div class="display-6 fw-bold mb-0">{{ job.match_score }}%</div>
+                            </div>
+
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar {% if job.match_score >= 80 %}bg-success{% elif job.match_score >= 60 %}bg-primary{% else %}bg-warning{% endif %}" 
+                                     role="progressbar" 
+                                     style="width: {{ job.match_score }}%;" 
+                                     aria-valuenow="{{ job.match_score }}" 
+                                     aria-valuemin="0" 
+                                     aria-valuemax="100">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Bottom Action Button -->
+    <div class="text-center mt-5">
+        <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold shadow-sm">
+            <i class="bi bi-arrow-repeat me-2"></i> Search with Another Profile
+        </a>
+    </div>
+
+</div>
+{% endblock %}

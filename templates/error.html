@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}{{ error_title or "Error" }} | AI Job Recommender{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 text-center">
+            <div class="card border-0 shadow-sm rounded-4 p-5 bg-white">
+                <div class="mb-4">
+                    <span class="display-1 text-warning">
+                        <i class="bi bi-exclamation-triangle"></i>
+                    </span>
+                </div>
+                <h3 class="fw-bold text-dark mb-3">{{ error_title or "Notice" }}</h3>
+                <p class="text-secondary lead fs-6 mb-4">
+                    {{ error_message or "An unexpected issue was encountered. Please try submitting your profile again." }}
+                </p>
+                <div>
+                    <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg px-4 py-2 rounded-pill fw-semibold shadow-sm">
+                        <i class="bi bi-house-door me-2"></i> Return to Homepage
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,116 @@
+job_id,job_title,company,location,required_skills,qualification,experience,job_type,description
+1,Python Developer,Infosys,Hyderabad,"Python, Django, REST API, PostgreSQL, Git",B.Tech,1,Full-time,Develop and maintain scalable backend web services and REST APIs using Python and Django framework.
+2,Python Developer,TCS,Bangalore,"Python, Flask, SQL, Docker, Linux",B.Tech,2,Full-time,Build robust server-side microservices and database integration pipelines using Flask and SQL.
+3,Python Developer,Wipro,Pune,"Python, Scripting, Automation, Selenium, MySQL",B.E.,1,Full-time,Automate internal workflows and develop Python scripts for web scraping and data integration.
+4,Python Developer,Cognizant,Chennai,"Python, FastAPI, MongoDB, Redis, Git",B.Tech,3,Full-time,Design high-performance asynchronous API endpoints and caching layers using FastAPI and Redis.
+5,Python Developer,Mindtree,Hyderabad,"Python, Django, AWS, Celery, PostgreSQL",MCA,2,Full-time,Build cloud-native backend applications with Django asynchronous task queues and AWS services.
+6,Python Developer,Accenture,Noida,"Python, Pandas, NumPy, REST API, SQLite",B.Tech,0,Full-time,Entry-level Python developer to assist in software component building and database operations.
+7,Python Developer,Capgemini,Gurgaon,"Python, OOP, Data Structures, Git, Unit Testing",B.Tech,1,Full-time,Write clean modular Python code for enterprise business applications and unit tests.
+8,Python Developer,LTIMindtree,Mumbai,"Python, Flask, SQLAlchemy, Docker, Jenkins",B.E.,2,Full-time,Maintain containerized Flask microservices and participate in continuous integration pipelines.
+9,Data Analyst,Deloitte,Hyderabad,"Python, Pandas, SQL, Tableau, Excel",B.Tech,1,Full-time,Extract analyze and visualize client business data using Python Pandas and interactive Tableau dashboards.
+10,Data Analyst,Mu Sigma,Bangalore,"SQL, Excel, Power BI, Statistics, Python",B.Sc,0,Full-time,Perform exploratory data analysis and build executive KPI dashboards for decision makers.
+11,Data Analyst,Fractal Analytics,Pune,"Python, SQL, Power BI, Business Intelligence, Data Cleaning",B.Tech,2,Full-time,Transform complex multi-source data into clean analytics dashboards and statistical reports.
+12,Data Analyst,EY,Gurgaon,"SQL, Excel, Data Modeling, Tableau, Communication",Any Graduate,1,Full-time,Analyze client business processes financial metrics and design automated reporting solutions.
+13,Data Analyst,KPMG,Mumbai,"Python, R, SQL, Power BI, Advanced Excel",B.Tech,2,Full-time,Perform risk analysis and statistical evaluation across diverse enterprise audit datasets.
+14,Data Analyst,PwC,Chennai,"SQL, Alteryx, Tableau, Data Cleaning, Python",MCA,1,Full-time,Develop automated data extraction workflows and interactive executive reporting visualizations.
+15,Data Analyst,Amazon,Hyderabad,"SQL, Python, ETL, QuickSight, Data Warehousing",B.Tech,3,Full-time,Write complex SQL queries on AWS Redshift and build automated operations intelligence metrics.
+16,Data Analyst,Flipkart,Bangalore,"Python, Pandas, SQL, Tableau, E-commerce Analytics",B.Tech,2,Full-time,Analyze customer shopping funnels conversion metrics and supply chain fulfillment performance.
+17,Data Scientist,Google,Bangalore,"Python, Machine Learning, TensorFlow, Statistics, Pandas",M.Tech,3,Full-time,Develop and deploy state-of-the-art predictive models and machine learning pipelines at scale.
+18,Data Scientist,Microsoft,Hyderabad,"Python, Scikit-learn, Deep Learning, Azure ML, NLP",M.Tech,3,Full-time,Apply natural language processing and statistical modeling to enhance product intelligence.
+19,Data Scientist,Tiger Analytics,Chennai,"Python, Scikit-learn, SQL, Statistics, Feature Engineering",B.Tech,2,Full-time,Build statistical forecasting and classification algorithms for global retail and insurance clients.
+20,Data Scientist,LatentView,Bangalore,"Python, Machine Learning, Tableau, Predictive Modeling, SQL",B.Tech,1,Full-time,Perform exploratory modeling feature selection and deliver actionable predictive insights.
+21,Data Scientist,TCS,Hyderabad,"Python, Machine Learning, Scikit-learn, Pandas, Statistics",B.Tech,2,Full-time,Deliver predictive analytics solutions and supervised learning models for healthcare domains.
+22,Data Scientist,Wipro,Pune,"Python, NLP, NLTK, Scikit-learn, SQL",B.Tech,2,Full-time,Develop text processing algorithms sentiment analysis pipelines and topic classification models.
+23,Data Scientist,Infosys,Bangalore,"Python, Time Series, Forecasting, Scikit-learn, Pandas",MCA,2,Full-time,Build demand forecasting and regression models using ARIMA and tree-based ensembles.
+24,Data Scientist,Cognizant,Kolkata,"Python, Machine Learning, Scikit-learn, Data Mining, SQL",B.Tech,1,Full-time,Clean large-scale structured datasets and develop predictive machine learning algorithms.
+25,Machine Learning Engineer,NVIDIA,Pune,"Python, C++, PyTorch, CUDA, Computer Vision",M.Tech,3,Full-time,Optimize deep neural networks for accelerated hardware inference and edge deployment.
+26,Machine Learning Engineer,Swiggy,Bangalore,"Python, Scikit-learn, Feature Stores, MLOps, Docker",B.Tech,2,Full-time,Build and deploy real-time delivery estimation and recommendation models into production.
+27,Machine Learning Engineer,Zomato,Gurgaon,"Python, Machine Learning, Recommendation Systems, Kafka, Redis",B.Tech,2,Full-time,Architect scalable recommendation engines and ranking algorithms for million-user traffic.
+28,Machine Learning Engineer,Jio,Mumbai,"Python, Scikit-learn, TensorFlow, MLOps, Kubernetes",B.Tech,3,Full-time,Automate continuous model training monitoring and deployment pipelines for telecom analytics.
+29,Machine Learning Engineer,Tech Mahindra,Hyderabad,"Python, Scikit-learn, NLP, Flask, Docker",B.Tech,1,Full-time,Develop NLP classification microservices and expose trained ML models via Flask REST APIs.
+30,Machine Learning Engineer,Persistent Systems,Pune,"Python, Machine Learning, Pandas, Scikit-learn, Git",B.Tech,1,Full-time,Train evaluate and validate supervised machine learning models for enterprise clients.
+31,AI Engineer,Accenture,Bangalore,"Python, Generative AI, LangChain, NLP, Vector DB",B.Tech,2,Full-time,Build retrieval-augmented generation applications and intelligent conversational agent systems.
+32,AI Engineer,Tata Elxsi,Trivandrum,"Python, OpenCV, Computer Vision, Deep Learning, PyTorch",B.Tech,2,Full-time,Develop autonomous computer vision perception algorithms and object detection pipelines.
+33,AI Engineer,Wipro,Hyderabad,"Python, NLP, Transformers, HuggingFace, FastAPI",B.Tech,2,Full-time,Implement transformer-based NLP solutions for document summarization and entity extraction.
+34,AI Engineer,HCL Tech,Noida,"Python, AI, Machine Learning, Prompt Engineering, API",B.E.,1,Full-time,Assist in integrating cognitive AI capabilities and machine learning models into client software.
+35,AI Engineer,Bosch,Bangalore,"Python, Edge AI, Embedded Systems, TensorFlow Lite, C++",M.Tech,3,Full-time,Deploy quantized machine learning and AI inference models on embedded automotive controllers.
+36,Web Developer,Zoho,Chennai,"HTML, CSS, JavaScript, React, REST API",B.Tech,1,Full-time,Build sleek interactive web applications and responsive user interfaces for SaaS products.
+37,Web Developer,Freshworks,Chennai,"JavaScript, Vue.js, HTML5, CSS3, Node.js",B.Tech,2,Full-time,Develop high-speed front-end components and integrate real-time APIs for customer experience apps.
+38,Web Developer,TCS,Hyderabad,"HTML5, CSS3, JavaScript, Bootstrap, jQuery",B.Sc,0,Full-time,Create mobile-friendly web pages and validate browser compatibility for enterprise portals.
+39,Web Developer,Infosys,Pune,"JavaScript, TypeScript, React, HTML5, CSS3",B.Tech,1,Full-time,Develop responsive single page web applications using React and modern CSS frameworks.
+40,Web Developer,Wipro,Bangalore,"HTML, CSS, JavaScript, PHP, MySQL",BCA,1,Full-time,Maintain dynamic web portals build database forms and optimize front-end rendering performance.
+41,Web Developer,Cognizant,Kolkata,"HTML5, CSS3, Bootstrap 5, JavaScript, Git",B.Tech,0,Full-time,Build intuitive web layouts from UI wireframes using Bootstrap and standard web technologies.
+42,Frontend Developer,Razorpay,Bangalore,"React, TypeScript, Redux, Tailwind CSS, Jest",B.Tech,2,Full-time,Build secure frictionless payment checkout interfaces and accessible dashboard experiences.
+43,Frontend Developer,Paytm,Noida,"JavaScript, React, HTML5, CSS3, Webpack",B.Tech,2,Full-time,Design responsive consumer-facing web flows with high render speed and SEO friendliness.
+44,Frontend Developer,Oracle,Hyderabad,"Angular, TypeScript, RxJS, HTML5, SCSS",B.Tech,3,Full-time,Develop enterprise cloud console front-end interfaces using Angular component architecture.
+45,Frontend Developer,Thoughtworks,Pune,"React, JavaScript, HTML5, CSS3, TDD",B.Tech,2,Full-time,Implement clean reusable UI widgets and practice test-driven front-end development.
+46,Frontend Developer,HCL Tech,Chennai,"HTML5, CSS3, JavaScript, Bootstrap, React",MCA,1,Full-time,Convert Figma design mockups into responsive pixel-perfect front-end components.
+47,Frontend Developer,Mindtree,Bangalore,"Vue.js, JavaScript, HTML5, CSS3, REST API",B.Tech,1,Full-time,Develop progressive web application front-ends and connect with backend JSON endpoints.
+48,Backend Developer,CRED,Bangalore,"Go, Python, PostgreSQL, Redis, Kafka",B.Tech,2,Full-time,Build ultra-reliable high-throughput transactional backend services and financial ledgers.
+49,Backend Developer,PhonePe,Bangalore,"Java, Spring Boot, MySQL, Kafka, Microservices",B.Tech,3,Full-time,Scale real-time payment processing backends handling millions of transactions per second.
+50,Backend Developer,Urban Company,Gurgaon,"Node.js, Express, MongoDB, Redis, Docker",B.Tech,2,Full-time,Develop microservices for real-time booking dispatch dynamic pricing and partner matching.
+51,Backend Developer,InMobi,Bangalore,"Java, Distributed Systems, Aerospike, Kafka, AWS",B.Tech,3,Full-time,Architect low-latency ad serving backends handling massive concurrent bidder requests.
+52,Backend Developer,Infosys,Hyderabad,"Python, Flask, PostgreSQL, REST API, Git",B.Tech,1,Full-time,Create secure RESTful endpoints manage relational databases and write integration tests.
+53,Backend Developer,TCS,Chennai,"Java, Spring Boot, Hibernate, Oracle, REST API",B.E.,2,Full-time,Build banking middleware services and implement secure data transfer protocols.
+54,Backend Developer,Wipro,Noida,"Node.js, Express, MySQL, REST API, JWT",MCA,1,Full-time,Implement authenticated backend REST APIs and business logic for e-commerce platforms.
+55,Full Stack Developer,Zerodha,Bangalore,"Python, Go, PostgreSQL, React, WebSockets",B.Tech,2,Full-time,Build high-frequency trading dashboards and resilient backend market feed services.
+56,Full Stack Developer,Postman,Bangalore,"JavaScript, TypeScript, Node.js, React, Electron",B.Tech,3,Full-time,Build developer productivity tools across desktop application interfaces and cloud APIs.
+57,Full Stack Developer,Accenture,Hyderabad,"Python, Django, React, PostgreSQL, Docker",B.Tech,2,Full-time,Engineer end-to-end full stack web platforms with Django backend and React frontend.
+58,Full Stack Developer,Cognizant,Pune,"Java, Spring Boot, Angular, MySQL, Git",B.Tech,2,Full-time,Develop enterprise web portals combining Angular client UI with Spring Boot services.
+59,Full Stack Developer,Capgemini,Chennai,"MERN Stack, MongoDB, Express, React, Node.js",B.Tech,1,Full-time,Deliver dynamic web solutions using full JavaScript stack and cloud databases.
+60,Full Stack Developer,TCS,Kolkata,"Python, Flask, HTML5, CSS3, JavaScript, SQLite",B.Tech,0,Full-time,Build entry-level full stack web portals with Flask routing and dynamic HTML rendering.
+61,Full Stack Developer,Wipro,Hyderabad,"Python, React, SQL, REST API, Git",MCA,1,Full-time,Design unified web platforms handling both client-side interactivity and database persistence.
+62,Java Developer,Cisco,Bangalore,"Java, Spring Boot, Microservices, Kubernetes, Docker",B.Tech,3,Full-time,Engineer cloud-managed networking software and microservices using Java 17 and Spring.
+63,Java Developer,Oracle,Hyderabad,"Java, Core Java, Multithreading, SQL, Spring",B.Tech,2,Full-time,Develop mission-critical database engine extensions and enterprise business modules in Java.
+64,Java Developer,TCS,Mumbai,"Java, Spring Boot, Hibernate, MySQL, Maven",B.Tech,1,Full-time,Implement RESTful web services and object-relational database mappings using Hibernate.
+65,Java Developer,Infosys,Pune,"Java, J2EE, Spring MVC, Oracle, Web Services",B.E.,2,Full-time,Maintain legacy banking applications and migrate monolithic services to modern Spring Boot.
+66,Java Developer,Cognizant,Chennai,"Java, Spring Boot, Kafka, MongoDB, Microservices",B.Tech,2,Full-time,Develop event-driven backend services and distributed document persistence layers in Java.
+67,Java Developer,HCL Tech,Noida,"Java, Core Java, Data Structures, OOP, MySQL",B.Tech,0,Full-time,Junior Java developer responsible for writing unit tests fixing bugs and implementing features.
+68,Java Developer,Tech Mahindra,Hyderabad,"Java, Spring Boot, REST API, PostgreSQL, Git",B.Tech,1,Full-time,Build reliable API integrations for telecommunication billing and account provisioning.
+69,Software Engineer,Qualcomm,Hyderabad,"C, C++, Data Structures, Algorithms, Linux",B.Tech,2,Full-time,Develop low-level device drivers and modem system software on Linux platforms.
+70,Software Engineer,Amazon,Bangalore,"Java, Distributed Systems, AWS, Algorithms, NoSQL",B.Tech,2,Full-time,Design large-scale distributed e-commerce inventory management systems and services.
+71,Software Engineer,Microsoft,Hyderabad,"C#, .NET Core, Azure, System Design, SQL",B.Tech,2,Full-time,Build scalable enterprise cloud services and developer productivity tools on Azure.
+72,Software Engineer,Adobe,Noida,"C++, Python, Algorithms, Computer Graphics, Git",B.Tech,3,Full-time,Improve graphics rendering pipelines and performance optimization in creative suite tools.
+73,Software Engineer,TCS,Bangalore,"Python, Java, OOP, Data Structures, SQL",B.Tech,0,Full-time,Solve real-world algorithmic problems write clean code and support software deliveries.
+74,Software Engineer,Infosys,Mysore,"Java, Python, C++, SQL, Software Engineering",B.Tech,0,Full-time,Graduate software engineer trainee engaging in software development lifecycle methodologies.
+75,Software Engineer,Wipro,Chennai,"C++, Linux, Python, Shell Scripting, Git",B.Tech,1,Full-time,Maintain embedded systems software and automate test execution using shell scripts.
+76,Cloud Engineer,Deloitte,Hyderabad,"AWS, Terraform, EC2, S3, IAM, CloudWatch",B.Tech,2,Full-time,Provision and manage secure multi-account AWS infrastructure using Terraform code.
+77,Cloud Engineer,TCS,Bangalore,"Azure, PowerShell, ARM Templates, Virtual Networks, Blob",B.Tech,2,Full-time,Configure Azure enterprise tenancies deploy virtual networks and monitor cloud health.
+78,Cloud Engineer,Wipro,Pune,"GCP, Compute Engine, Cloud Storage, BigQuery, IAM",B.Tech,2,Full-time,Assist clients in migrating legacy on-premise compute workloads to Google Cloud Platform.
+79,Cloud Engineer,Cognizant,Chennai,"AWS, CloudFormation, Lambda, API Gateway, DynamoDB",B.Tech,1,Full-time,Build serverless application architectures and monitor system metrics using CloudWatch.
+80,Cloud Engineer,Accenture,Gurgaon,"AWS, Azure, Cloud Security, Linux, Networking",MCA,2,Full-time,Implement identity federation role-based access control and security compliance policies.
+81,Cloud Engineer,Capgemini,Hyderabad,"Cloud Computing, AWS, Linux, Python, Docker",B.E.,1,Full-time,Assist senior cloud architects with containerization and cloud resource provisioning.
+82,DevOps Engineer,Razorpay,Bangalore,"Kubernetes, Docker, Terraform, Helm, CI/CD",B.Tech,3,Full-time,Maintain production Kubernetes clusters and automate resilient financial service deployments.
+83,DevOps Engineer,Jio,Mumbai,"Jenkins, GitLab CI, Docker, Ansible, Linux",B.Tech,2,Full-time,Automate build pipelines artifact repositories and server configurations across data centers.
+84,DevOps Engineer,Infosys,Hyderabad,"Git, Jenkins, Docker, Linux, Bash Scripting",B.Tech,1,Full-time,Set up continuous integration pipelines and containerize client legacy applications.
+85,DevOps Engineer,Wipro,Chennai,"Docker, Kubernetes, AWS, Prometheus, Grafana",B.Tech,2,Full-time,Implement observability logging and alerting dashboards for containerized services.
+86,DevOps Engineer,Cognizant,Kolkata,"CI/CD, Azure DevOps, Docker, PowerShell, Git",B.Tech,1,Full-time,Build automated release pipelines and maintain code repositories using Azure DevOps.
+87,DevOps Engineer,TCS,Pune,"Linux, Shell Scripting, Git, Jenkins, SonarQube",MCA,1,Full-time,Enforce automated code quality scanning and continuous integration builds for agile teams.
+88,Database Developer,Oracle,Bangalore,"PL/SQL, Oracle DB, Performance Tuning, Indexing, ETL",B.Tech,3,Full-time,Optimize complex PL/SQL packages tune query execution plans and handle data partitioning.
+89,Database Developer,TCS,Hyderabad,"SQL, PostgreSQL, Database Design, Stored Procedures, Views",B.Tech,1,Full-time,Design relational database schemas write stored procedures and ensure data integrity.
+90,Database Developer,Infosys,Chennai,"SQL Server, T-SQL, SSIS, ETL, Data Modeling",B.E.,2,Full-time,Build ETL data transformation packages and maintain SQL Server transaction logs.
+91,Database Developer,Wipro,Pune,"MySQL, Database Administration, Backup, Replication, SQL",B.Tech,1,Full-time,Manage MySQL database clusters set up master-slave replication and monitor performance.
+92,Database Developer,Cognizant,Noida,"SQL, MongoDB, NoSQL, Data Migration, Query Optimization",MCA,2,Full-time,Migrate structured relational tables to flexible document stores and optimize query speed.
+93,Business Analyst,Deloitte,Hyderabad,"Agile, Jira, Requirements Gathering, SQL, User Stories",B.Tech,2,Full-time,Bridge business stakeholders and engineering teams by drafting clear functional specifications.
+94,Business Analyst,EY,Bangalore,"BRD, FRD, UML, Process Mapping, Excel",Any Graduate,2,Full-time,Document business requirements translate client vision into technical stories and manage backlogs.
+95,Business Analyst,TCS,Mumbai,"Agile, Scrum, SQL, Power BI, Stakeholder Management",B.Tech,1,Full-time,Facilitate sprint ceremonies write acceptance criteria and track deliverables in Jira.
+96,Business Analyst,Infosys,Pune,"Business Analysis, Gap Analysis, Wireframing, SQL, Visio",MCA,1,Full-time,Map current state business workflows identify process gaps and design target state models.
+97,Business Analyst,Cognizant,Chennai,"Requirements Elicitation, User Stories, Agile, Tableau, Excel",B.Tech,1,Full-time,Interact with domain subject matter experts to document digital transformation requirements.
+98,QA Automation Engineer,Amazon,Hyderabad,"Selenium, Python, PyTest, TestNG, API Testing",B.Tech,2,Full-time,Build automated regression test suites and end-to-end API automation frameworks.
+99,QA Automation Engineer,TCS,Bangalore,"Java, Selenium WebDriver, TestNG, Cucumber, Jenkins",B.Tech,1,Full-time,Implement Behavior Driven Development test scripts and integrate with Jenkins CI.
+100,QA Automation Engineer,Wipro,Hyderabad,"Python, Selenium, Postman, JIRA, SQL",B.Tech,1,Full-time,Automate web functional tests validate backend REST endpoints and log defects in JIRA.
+101,Mobile App Developer,Flipkart,Bangalore,"Flutter, Dart, Android, iOS, REST API",B.Tech,2,Full-time,Build cross-platform mobile shopping apps with smooth 60fps animations and offline caching.
+102,Mobile App Developer,Paytm,Noida,"Android, Kotlin, Jetpack Compose, Coroutines, MVVM",B.Tech,2,Full-time,Develop modern Android payment screens using Jetpack Compose and reactive architecture.
+103,Mobile App Developer,Infosys,Pune,"Flutter, Dart, Firebase, State Management, Git",B.Tech,1,Full-time,Develop cross-platform apps connect Firebase backends and manage application state.
+104,Data Engineer,Swiggy,Bangalore,"Python, Apache Spark, Kafka, Airflow, Snowflake",B.Tech,3,Full-time,Build real-time streaming data pipelines processing billions of geolocation and order events.
+105,Data Engineer,TCS,Hyderabad,"Python, SQL, Hadoop, Hive, Spark, ETL",B.Tech,2,Full-time,Design batch ETL pipelines on big data clusters and maintain enterprise data lakes.
+106,Data Engineer,Wipro,Chennai,"SQL, Azure Data Factory, Databricks, PySpark, Synapse",B.Tech,2,Full-time,Construct cloud data warehouses and orchestrate data transformation pipelines on Azure.
+107,Cybersecurity Analyst,Wipro,Bangalore,"SIEM, Splunk, Incident Response, Network Security, Wireshark",B.Tech,2,Full-time,Monitor security operations center alerts analyze network packets and remediate threats.
+108,Cybersecurity Analyst,Infosys,Hyderabad,"Vulnerability Assessment, Penetration Testing, Kali Linux, OWASP",B.Tech,1,Full-time,Conduct ethical web application security assessments and identify OWASP Top 10 vulnerabilities.
+109,Python Developer,StartupHub,Remote,"Python, FastAPI, PostgreSQL, Docker, AWS",B.Tech,2,Remote,Build scalable remote backend microservices with FastAPI and automated CI deployment.
+110,Data Analyst,AnalyticsHQ,Remote,"Python, SQL, Power BI, Statistics, Pandas",B.Sc,1,Remote,Analyze remote customer acquisition metrics churn rates and build weekly stakeholder reports.
+111,Frontend Developer,TechSolutions,Remote,"React, JavaScript, CSS3, Tailwind CSS, REST API",B.Tech,1,Remote,Collaborate remotely with distributed product designers to build responsive client dashboards.
+112,Full Stack Developer,CloudCrafters,Remote,"Python, Django, React, PostgreSQL, Docker",B.Tech,2,Remote,Deliver full-stack web applications with Python backend and modern responsive frontend.
+113,Machine Learning Engineer,DeepAI Labs,Remote,"Python, Scikit-learn, HuggingFace, FastAPI, Docker",M.Tech,2,Remote,Remotely research train and deploy state-of-the-art NLP classification models.
+114,Software Engineer,GlobalSoft,Remote,"Java, Python, Algorithms, Git, REST API",B.Tech,1,Remote,Develop high quality software modules and collaborate with an international engineering team.
+115,Data Scientist,InnoData,Remote,"Python, Scikit-learn, Pandas, Machine Learning, SQL",B.Tech,2,Remote,Develop predictive models customer segmentation and automated data scoring remotely.
